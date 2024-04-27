@@ -1,0 +1,39 @@
+def hitung_usia():
+    tahun_lahir = int(input("Masukkan tahun lahir Anda: "))
+    tahun_sekarang = 2024  
+    usia = tahun_sekarang - tahun_lahir
+    print(f"Usia Anda saat ini adalah {usia} tahun.")
+
+def hitung_sisa_tahun_angsuran():
+    total_tahun_angsuran = int(input("Masukkan total tahun angsuran: "))
+    tahun_terlewati = int(input("Masukkan jumlah tahun yang sudah berlalu: "))
+    sisa_tahun = total_tahun_angsuran - tahun_terlewati
+    if sisa_tahun > 0:
+        print(f"Sisa tahun angsuran yang harus dibayar adalah {sisa_tahun} tahun.")
+    else:
+        print("Anda telah melunasi angsuran ini.")
+
+def hitung_bmi():
+    berat_badan = float(input("Masukkan berat badan Anda (kg): "))
+    tinggi_cm = float(input("Masukkan tinggi badan Anda (cm): "))
+    tinggi_m = tinggi_cm / 100  
+    bmi = berat_badan / (tinggi_m ** 2)
+    print(f"BMI Anda adalah {bmi:.2f}")
+
+
+while True:
+    print("\nMenu Pilihan:")
+    print("1. Hitung Usia Saat Ini")
+    print("2. Hitung Sisa Tahun Angsuran")
+    print("3. Hitung Berat Badan BMI")
+
+    pilihan = input("Pilih menu (1,2,3): ")
+
+    if pilihan == '1':
+        hitung_usia()
+    elif pilihan == '2':
+        hitung_sisa_tahun_angsuran()
+    elif pilihan == '3':
+        hitung_bmi()
+    else:
+        print("Pilihan Tidak Ada Dimenu,Silakan pilih menu yang ada.")
